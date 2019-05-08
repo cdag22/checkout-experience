@@ -12,7 +12,7 @@ const ShippingForm = ({ next }) => {
         <label htmlFor="phoneNumber">Phone Number</label>
         <input type="number" name="phoneNumber" className="form-control" placeholder="(509)-123-4567" />
       </div>
-      <button onClick={() => next('showPaymentForm', 'showShippingForm')} className="form-control btn-block btn btn-dark mt-2">Next</button>
+      <button onClick={() => next()} className="form-control btn-block btn btn-dark mt-2">Next</button>
     </div>
   )
 };

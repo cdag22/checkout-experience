@@ -14,7 +14,7 @@ const GeneralForm = ({ next }) => {
         <label htmlFor="password">Password</label>
         <input type="password" className="form-control" />
       </div>
-      <button onClick={() => next('showShippingForm', 'showGeneralForm')} className="form-control btn-block btn btn-dark mt-2">Next</button>
+      <button onClick={() => next()} className="form-control btn-block btn btn-dark mt-2">Next</button>
     </div>
   )
 };

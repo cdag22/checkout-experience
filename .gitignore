@@ -1,3 +1,5 @@
 node_modules/
 public/
+public/App.js
+public/index.js
 .DS_Store

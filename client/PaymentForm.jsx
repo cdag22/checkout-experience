@@ -14,7 +14,7 @@ const PaymentForm = ({ next }) => {
         <label htmlFor="billingZipCode">Billing Zip Code</label>
         <input type="number" name="billingZipCode" className="form-control" placeholder="12345" />
       </div>
-      <button onClick={() => next('checkoutComplete', 'showPaymentForm')} className="form-control btn-block btn btn-dark mt-2">Next</button>
+      <button onClick={() => next()} className="form-control btn-block btn btn-dark mt-2">Next</button>
     </div>
   )
 };

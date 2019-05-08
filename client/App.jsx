@@ -10,20 +10,25 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      loadCheckout: true,
-      showGeneralForm: false,
-      showShippingForm: false,
-      showPaymentForm: false,
-      checkoutComplete: false,
+      formStateCounter: 0,
+      name: '',
+      email: '',
+      password: '',
+      cityState: '',
+      zipCode: 0,
+      phoneNumber: 0,
+      creditCardNumber: '',
+      expirationDate: new Date(),
+      cvv: 0,
+      billingZipCode: 0
     };
 
     this.showNextForm = this.showNextForm.bind(this);
   }
 
-  showNextForm(newForm, currentForm) {
+  showNextForm() {
     this.setState({
-      [currentForm]: false,
-      [newForm]: true
+      formStateCounter: this.state.formStateCounter + 1
     })
   }
 
@@ -36,11 +41,11 @@ class App extends React.Component {
         <main className="container">
           <div className="row">
             <div className="col-8 m-auto">
-              {this.state.loadCheckout ? <LoadCheckout next={this.showNextForm} /> : undefined}
-              {this.state.showGeneralForm ? <GeneralForm next={this.showNextForm} /> : undefined}
-              {this.state.showShippingForm ? <ShippingForm next={this.showNextForm} /> : undefined}
-              {this.state.showPaymentForm ? <PaymentForm next={this.showNextForm} /> : undefined}
-              {this.state.checkoutComplete ? <CheckoutComplete /> : undefined}
+              {this.state.formStateCounter === 0 ? <LoadCheckout next={this.showNextForm} /> : undefined}
+              {this.state.formStateCounter === 1 ? <GeneralForm next={this.showNextForm} /> : undefined}
+              {this.state.formStateCounter === 2 ? <ShippingForm next={this.showNextForm} /> : undefined}
+              {this.state.formStateCounter === 3 ? <PaymentForm next={this.showNextForm} /> : undefined}
+              {this.state.formStateCounter === 4 ? <CheckoutComplete /> : undefined}
             </div>
           </div>
         </main>
