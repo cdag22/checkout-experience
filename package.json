@@ -1,0 +1,34 @@
+{
+  "name": "checkout-experience",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel client --watch --out-dir public --presets=react --source-maps inline"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdag22/checkout-experience.git"
+  },
+  "author": "cj dagostino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cdag22/checkout-experience/issues"
+  },
+  "homepage": "https://github.com/cdag22/checkout-experience#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "express": "^4.16.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "sequelize": "^5.8.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-react": "^1.0.0",
+    "babel-preset-react": "^6.24.1",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
+  }
+}
