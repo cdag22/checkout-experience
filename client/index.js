@@ -1,5 +1,7 @@
-import App from './App.js';
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import App from 'App';
 // const React = require('react');
-// const App = require('./components/App');
+// const App = require('./App');
 
-ReactDOM.render(<App />, document.getElementById('app'));
+// ReactDOM.render(<App />, document.getElementById('app'));
