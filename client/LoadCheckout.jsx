@@ -1,7 +1,7 @@
-const LoadCheckout = ({ next }) => {
+const LoadCheckout = ({ showNext }) => {
 
   return (
-    <button className="btn btn-dark btn-lg btn-block" onClick={() => next()}>Checkout</button>
+    <button className="btn btn-dark btn-lg btn-block" onClick={() => showNext()}>Checkout</button>
   );
 };
 

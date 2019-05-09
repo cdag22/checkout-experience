@@ -1,18 +1,18 @@
-const ShippingForm = ({ next }) => {
+const ShippingForm = ({ showNext, updateUserData }) => {
 
   return (
     <div className="form">
       <div className="form-group">
         <label htmlFor="Address">Address</label>
-        <input type="text" className="form-control" placeholder="123 spruce St. Boulder, CO" />
+        <input onChange={(e) => updateUserData('cityState', e.target.value)} type="text" className="form-control" placeholder="123 spruce St. Boulder, CO" />
         <label htmlFor="zipCode">Zip Code</label>
-        <input type="number" name="zipCode" className="form-control" placeholder="11302" />
+        <input onChange={(e) => updateUserData('zipCode', e.target.value)} type="number" name="zipCode" className="form-control" placeholder="11302" />
       </div>
       <div className="form-group">
         <label htmlFor="phoneNumber">Phone Number</label>
-        <input type="number" name="phoneNumber" className="form-control" placeholder="(509)-123-4567" />
+        <input onChange={(e) => updateUserData('phoneNumber', e.target.value)} type="number" name="phoneNumber" className="form-control" placeholder="(509)-123-4567" />
       </div>
-      <button onClick={() => next()} className="form-control btn-block btn btn-dark mt-2">Next</button>
+      <button onClick={() => showNext()} className="form-control btn-block btn btn-dark mt-2">Next</button>
     </div>
   )
 };

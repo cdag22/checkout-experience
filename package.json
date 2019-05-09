@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/cdag22/checkout-experience#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "bootstrap": "^4.3.1",
     "express": "^4.16.4",
+    "mysql2": "^1.6.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "sequelize": "^5.8.5"

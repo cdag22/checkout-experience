@@ -1,20 +1,20 @@
-const GeneralForm = ({ next }) => {
+const GeneralForm = ({ showNext, updateUserData }) => {
 
   return (
     <div className="form">
       <div className="form-group">
         <label htmlFor="name">Name</label>
-        <input type="text" className="form-control" placeholder="John Doe..." />
+        <input onChange={(e) => updateUserData('name', e.target.value)} type="text" className="form-control" placeholder="John Doe..." />
       </div>
       <div className="form-group">
         <label htmlFor="email">email</label>
-        <input type="email" className="form-control" placeholder="me@google.com" />
+        <input onChange={(e) => updateUserData('email', e.target.value)} type="email" className="form-control" placeholder="me@google.com" />
       </div>
       <div className="form-group">
         <label htmlFor="password">Password</label>
-        <input type="password" className="form-control" />
+        <input onChange={(e) => updateUserData('password', e.target.value)} type="password" className="form-control" />
       </div>
-      <button onClick={() => next()} className="form-control btn-block btn btn-dark mt-2">Next</button>
+      <button onClick={() => showNext()} className="form-control btn-block btn btn-dark mt-2">Next</button>
     </div>
   )
 };
